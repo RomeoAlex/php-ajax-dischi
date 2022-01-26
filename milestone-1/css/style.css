@@ -1,0 +1,38 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+header{
+    height: 100px;
+    background-color: #2e3a46;
+}
+.logo{
+    padding:10px;
+}
+.logo img{
+    height: 80px;
+}
+.album-wrapper{
+    width:70%;
+    margin:auto;
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;    
+}
+.main-container{
+    width:100%;
+    margin: auto;
+    background-color: #1e2d3b;
+    min-height: 100vh;
+}
+.comic{
+    width: calc(( 100% / 6 ) - 15px) ;
+    padding: 15px;
+}
+.comic-title{
+    margin-top: 20px;
+    display: block;
+    color:white;
+    font-size: 20px;
+}
