@@ -31,15 +31,15 @@ Attraverso un’altra chiamata api, filtrare gli album per genere. -->
         <div class="album-wrapper">   
         <?php foreach ($database as $album) { ?>
             <div class="album-container">
-                    <img src="https://images-na.ssl-images-amazon.com/images/I/51sBr4IWDwL.jpg" alt="">
+                    <img src="<?php echo $album['poster']?>" alt="<?php echo $album['title']?>">
                 <h3 class="album-title">
-                    New Jersey
+                <?php echo $album['title']?>
                 </h3>
                 <h4 class="author">
-                    Bon Jovi
+                <?php echo $album['author']?>
                 </h4>
                 <h5 class="date">
-                    1988
+                <?php echo $album['year']?>
                 </h5>
             </div>
             <?php } ?>
