@@ -29,8 +29,9 @@ Attraverso un’altra chiamata api, filtrare gli album per genere. -->
             </div>
         </header>
         <div class="album-wrapper">   
+        <?php foreach ($database as $album) { ?>
             <div class="album-container">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/51sBr4IWDwL.jpg" alt="">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/51sBr4IWDwL.jpg" alt="">
                 <h3 class="album-title">
                     New Jersey
                 </h3>
@@ -41,6 +42,7 @@ Attraverso un’altra chiamata api, filtrare gli album per genere. -->
                     1988
                 </h5>
             </div>
+            <?php } ?>
         </div>
 </div>
 
