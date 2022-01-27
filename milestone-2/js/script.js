@@ -4,17 +4,24 @@ const app =  new Vue ({
     data: {
         message:'Hello',
         // dichiaro un array vuoto per riempirlo con i get di axios
-        album: [],
+        albums: [],
     },
     methods:{
-        getDataApi: function(){
-            axios.get('https://localhost:8888//php-ajax-dischi/milestone-1/database.php')
-            .then((risposta) =>{
-                 this.album = risposta.data;
+        getDataApi: function() {
+            axios.get('http://localhost:8888/php-ajax-dischi/milestone-2/server.php')
+            .then((response) =>{
+                 this.albums = response.data;
+                // console.log(response);
+            
             });
         }
 
     },
+
+    created: function() {
+        // faccio partire la funzione al caricamento della pagina
+        this.getDataApi();
+    }
     
     });
 

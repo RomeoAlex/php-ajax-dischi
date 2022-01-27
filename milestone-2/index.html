@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script text="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
 </head>
 <body>
     <!-- Stampare a schermo una decina di dischi musicali (vedi screenshot).
@@ -29,7 +30,7 @@ Attraverso un’altra chiamata api, filtrare gli album per genere. -->
             <div class="album-wrapper">   
                 <!-- prova vue -->
                 <!-- {{message}} -->
-                <div v-for="album in data " class="album-container">
+                <div v-for="album in albums " class="album-container">
                         <img :src="album.poster" :alt="album.title">
                     <h3 class="album-title">
                     {{album.title}}
