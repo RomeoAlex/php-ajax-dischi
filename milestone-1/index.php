@@ -1,3 +1,7 @@
+<?php 
+                require __DIR__ . '/database.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,28 +22,27 @@ Attraverso l’utilizzo di axios: al caricamento della pagina axios chiederà, a
 Bonus:
 Attraverso un’altra chiamata api, filtrare gli album per genere. -->
 <div class="main-container">
-        
+                
         <header>
             <div class="logo">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Spotify_icon.png" alt="">
             </div>
         </header>
-        <div class="album-wrapper">
-        <div class="comic">
-                <?php 
-                require __DIR__ . '/database.php';
-                foreach($database as $data){ ?>
-                    <?php echo '' . $data['poster'] . '';  ?>
-                    <?php echo '<span class="comic-title">' . $data['title'] . '</span>';  ?>
-                   <?php } ?>
-        </div>       
-                <div class="comic">
-                <img :src="objectComic.thumb" :alt="objectComic.series">
-                
-                
-                </div>
+        <div class="album-wrapper">   
+            <div class="album-container">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/51sBr4IWDwL.jpg" alt="">
+                <h3 class="album-title">
+                    New Jersey
+                </h3>
+                <h4 class="author">
+                    Bon Jovi
+                </h4>
+                <h5 class="date">
+                    1988
+                </h5>
+            </div>
         </div>
 </div>
-<script text="javascript" src="js/script.js"></script>
+
 </body>
 </html>
